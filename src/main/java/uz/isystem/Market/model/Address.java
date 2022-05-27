@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
@@ -24,7 +25,6 @@ public class Address {
     private String Street;
 
     private Integer Home;
-
 
 
 
