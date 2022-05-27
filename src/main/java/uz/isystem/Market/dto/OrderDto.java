@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
+
 @Getter
 @Setter
 
@@ -16,11 +17,11 @@ public class OrderDto {
     private Integer user;
 
     private LocalDateTime deliveryDate;
-@NotBlank(message = ("requirmentda hatolik!"))
+    @NotBlank(message = ("requirmentda hatolik!"))
     private String requirment;
-@NotBlank(message = ("contactda hatolik!"))
+    @NotBlank(message = ("contactda hatolik!"))
     private String contact;
-@NotBlank(message = ("adressda hatolik!"))
+    @NotBlank(message = ("adressda hatolik!"))
     private String adress;
 
     private LocalDateTime deleveredDate;
@@ -28,9 +29,6 @@ public class OrderDto {
     private String status;
 
     private Double total_payment;
-
-
-
 
 
 }

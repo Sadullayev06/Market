@@ -13,41 +13,34 @@ import javax.validation.Valid;
 public class OrderController {
 
 
-@Autowired
+    @Autowired
     private OrderService orderService;
 
-@PostMapping("/create")
-public ResponseEntity<?> create(@RequestBody @Valid OrderDto orderDto){
-    OrderDto result = orderService.create(orderDto);
-    return ResponseEntity.ok(orderDto);
-}
+    @PostMapping("/create")
+    public ResponseEntity<?> create(@RequestBody @Valid OrderDto orderDto) {
+        OrderDto result = orderService.create(orderDto);
+        return ResponseEntity.ok(orderDto);
+    }
 
-@GetMapping("/{id}")
-    public ResponseEntity<?> get(@PathVariable("id") Integer id){
-    OrderDto result = orderService.get(id);
-    return ResponseEntity.ok(result);
-}
+    @GetMapping("/{id}")
+    public ResponseEntity<?> get(@PathVariable("id") Integer id) {
+        OrderDto result = orderService.get(id);
+        return ResponseEntity.ok(result);
+    }
 
-@PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid OrderDto orderDto){
-    boolean result = orderService.update(id,orderDto);
-    return ResponseEntity.ok(result);
-}
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid OrderDto orderDto) {
+        boolean result = orderService.update(id, orderDto);
+        return ResponseEntity.ok(result);
+    }
 
-@DeleteMapping("/{id}")
-    public ResponseEntity<?> delete (@PathVariable("id") Integer id,@RequestBody @Valid OrderDto orderDto){
-    boolean result = orderService.delete(id,orderDto);
-    return ResponseEntity.ok(result);
-}
-
-
-
-
-
-
-
-
-
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid OrderDto orderDto) {
+        boolean result = orderService.delete(id, orderDto);
+        return ResponseEntity.ok(result);
+    }
 
 
 }

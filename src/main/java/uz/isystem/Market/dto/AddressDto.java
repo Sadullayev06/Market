@@ -7,26 +7,20 @@ import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
-public class  AddressDto {
-
+public class AddressDto {
 
 
     private Integer id;
-@NotBlank(message = ("regionda hatolik!"))
+    @NotBlank(message = ("regionda hatolik!"))
     private String region;
-@NotBlank(message = ("cityda hatolik!"))
+    @NotBlank(message = ("cityda hatolik!"))
     private String City;
-@NotBlank(message = ("districtda hatolik!"))
+    @NotBlank(message = ("districtda hatolik!"))
     private String District;
-@NotBlank(message = ("streetda hatolik!"))
+    @NotBlank(message = ("streetda hatolik!"))
     private String Street;
 
     private Integer Home;
-
-
-
-
-
 
 
 }

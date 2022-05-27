@@ -9,38 +9,39 @@ import uz.isystem.Market.service.UserRoleService;
 import uz.isystem.Market.service.UserService;
 
 import javax.validation.Valid;
+
 @RestController
-@RequestMapping("/userroles")
+@RequestMapping("/userRoles")
 public class UserRoleController {
-
-
 
 
     @Autowired
     private UserRoleService userRoleService;
 
     @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody @Valid UserRoleDto userRoleDto){
+    public ResponseEntity<?> create(@RequestBody @Valid UserRoleDto userRoleDto) {
         UserRoleDto result = userRoleService.create(userRoleDto);
         return ResponseEntity.ok(result);
     }
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> get(@PathVariable("id") Integer id){
+    public ResponseEntity<?> get(@PathVariable("id") Integer id) {
         UserRoleDto result = userRoleService.get(id);
         return ResponseEntity.ok(result);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid UserRoleDto userRoleDto){
-        boolean result = userRoleService.update(id,userRoleDto);
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid UserRoleDto userRoleDto) {
+        boolean result = userRoleService.update(id, userRoleDto);
         return ResponseEntity.ok(result);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") Integer id, @RequestBody @Valid UserRoleDto userRoleDto){
-        boolean result = userRoleService.delete(id,userRoleDto);
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid UserRoleDto userRoleDto) {
+        boolean result = userRoleService.delete(id, userRoleDto);
         return ResponseEntity.ok(result);
     }
 

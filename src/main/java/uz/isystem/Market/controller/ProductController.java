@@ -30,14 +30,16 @@ public class ProductController {
  }
 
  @PutMapping("/{id}")
-public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid ProductDto productDto){
+public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                @RequestBody @Valid ProductDto productDto){
      boolean result = productService.update(id, productDto);
      return ResponseEntity.ok(result);
  }
 
 
  @DeleteMapping("/{id}")
-public ResponseEntity<?> delete(@PathVariable("id") Integer id,@RequestBody @Valid ProductDto productDto){
+public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                @RequestBody @Valid ProductDto productDto){
      boolean result = productService.delete(id,productDto);
      return ResponseEntity.ok(result);
 

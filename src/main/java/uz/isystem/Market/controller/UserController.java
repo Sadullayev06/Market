@@ -13,32 +13,34 @@ import javax.validation.Valid;
 @RequestMapping("/users")
 public class UserController {
 
-@Autowired
+    @Autowired
     private UserService userService;
 
-@PostMapping("/create")
-public ResponseEntity<?> create(@RequestBody @Valid UserDto userDto){
-    UserDto result = userService.create(userDto);
-    return ResponseEntity.ok(result);
-}
+    @PostMapping("/create")
+    public ResponseEntity<?> create(@RequestBody @Valid UserDto userDto) {
+        UserDto result = userService.create(userDto);
+        return ResponseEntity.ok(result);
+    }
 
 
-@GetMapping("/{id}")
-public ResponseEntity<?> get(@PathVariable("id") Integer id){
-    UserDto result = userService.get(id);
-    return ResponseEntity.ok(result);
-}
+    @GetMapping("/{id}")
+    public ResponseEntity<?> get(@PathVariable("id") Integer id) {
+        UserDto result = userService.get(id);
+        return ResponseEntity.ok(result);
+    }
 
-@PutMapping("/{id}")
-public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid UserDto userDto){
-    boolean result = userService.update(id,userDto);
-    return ResponseEntity.ok(result);
-}
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid UserDto userDto) {
+        boolean result = userService.update(id, userDto);
+        return ResponseEntity.ok(result);
+    }
 
-@DeleteMapping("/{id}")
-public ResponseEntity<?> delete(@PathVariable("id") Integer id, @RequestBody @Valid UserDto userDto){
-    boolean result = userService.delete(id,userDto);
-    return ResponseEntity.ok(result);
-}
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid UserDto userDto) {
+        boolean result = userService.delete(id, userDto);
+        return ResponseEntity.ok(result);
+    }
 
 }

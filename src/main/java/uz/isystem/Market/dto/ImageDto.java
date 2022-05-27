@@ -14,15 +14,12 @@ public class ImageDto {
     //hov
 
     private Integer id;
-   @NotBlank(message = ("pathda hatolik!"))
+    @NotBlank(message = ("pathda hatolik!"))
     private String path;
-@NotBlank(message = ("typeda hatolik!"))
+    @NotBlank(message = ("typeda hatolik!"))
     private String type;
-
     private Long size;
-
     private String token;
-
 
 
 }

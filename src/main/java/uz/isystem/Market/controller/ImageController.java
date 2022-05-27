@@ -32,13 +32,15 @@ public class ImageController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid ImageDto imageDto){
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid ImageDto imageDto){
         boolean result = imageService.update(id,imageDto);
         return ResponseEntity.ok(result);
     }
 
 @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") Integer id,@RequestBody @Valid ImageDto imageDto){
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid ImageDto imageDto){
         boolean result = imageService.delete(id,imageDto);
         return ResponseEntity.ok(result);
 }

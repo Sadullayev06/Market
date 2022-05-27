@@ -11,9 +11,9 @@ public class ProductDto {
 
 
     private Integer id;
-@NotBlank(message = ("nameda hatolik!"))
+    @NotBlank(message = ("nameda hatolik!"))
     private String name;
-@NotBlank(message = ("descriptionda hatolik!"))
+    @NotBlank(message = ("descriptionda hatolik!"))
     private String description;
 
     private Double price;
@@ -21,15 +21,10 @@ public class ProductDto {
     private Integer rate;
 
     private Boolean visible;
-@NotBlank(message = ("producttypeda hatolik!"))
+    @NotBlank(message = ("producttypeda hatolik!"))
     private String ProductType;
 
     private String status;
-
-
-
-
-
 
 
 }

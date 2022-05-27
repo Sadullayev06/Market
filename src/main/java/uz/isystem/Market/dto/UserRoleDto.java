@@ -11,14 +11,10 @@ import javax.validation.constraints.NotBlank;
 public class UserRoleDto {
 
     private Integer id;
-@NotBlank(message = ("nameda hatolik!"))
+    @NotBlank(message = ("nameda hatolik!"))
     private String name;
 
     private String status;
-
-
-
-
 
 
 }

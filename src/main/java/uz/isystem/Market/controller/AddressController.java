@@ -9,7 +9,7 @@ import uz.isystem.Market.service.AddressService;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/adresses")
+@RequestMapping("/addresses")
 public class AddressController {
 
     @Autowired
@@ -17,35 +17,32 @@ public class AddressController {
 
     @PostMapping("/create")
 
-    public ResponseEntity<?> create(@RequestBody @Valid AddressDto addressDto){
+    public ResponseEntity<?> create(@RequestBody @Valid AddressDto addressDto) {
         AddressDto result = addressService.create(addressDto);
         return ResponseEntity.ok(result);
     }
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> get(@PathVariable("id") Integer id){
+    public ResponseEntity<?> get(@PathVariable("id") Integer id) {
         AddressDto result = addressService.get(id);
         return ResponseEntity.ok(result);
     }
 
 
-@PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid AddressDto addressDto){
-        boolean result = addressService.update(id,addressDto);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid AddressDto addressDto) {
+        boolean result = addressService.update(id, addressDto);
         return ResponseEntity.ok(result);
-}
+    }
 
-@DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") Integer id,@RequestBody @Valid AddressDto addressDto){
-        boolean result = addressService.delete(id,addressDto);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid AddressDto addressDto) {
+        boolean result = addressService.delete(id, addressDto);
         return ResponseEntity.ok(result);
-}
-
-
-
-
-
+    }
 
 
 }

@@ -12,13 +12,12 @@ public class OrderItemDto {
 
 
     private Integer id;
-@NotBlank(message = ("orderda hatolik!"))
+    @NotBlank(message = ("orderda hatolik!"))
     private String Order;
-@NotBlank(message = ("productda hatolik!"))
+    @NotBlank(message = ("productda hatolik!"))
     private String Product;
 
     private String status;
-
 
 
 }

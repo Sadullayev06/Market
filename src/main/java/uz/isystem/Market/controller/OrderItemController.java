@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uz.isystem.Market.dto.OrderItemDto;
-import uz.isystem.Market.model.OrderItem;
 import uz.isystem.Market.service.OrderItemService;
 
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/orderitems")
+@RequestMapping("/orderItems")
 public class OrderItemController {
 
 
@@ -30,14 +29,16 @@ public class OrderItemController {
 }
 
 @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id,@RequestBody @Valid OrderItemDto orderItemDto){
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody @Valid OrderItemDto orderItemDto){
     boolean result = orderItemService.update(id,orderItemDto);
     return ResponseEntity.ok(result);
 }
 
 
 @DeleteMapping("/{id}")
-public ResponseEntity<?> delete(@PathVariable("id") Integer id,@RequestBody @Valid OrderItemDto orderItemDto){
+public ResponseEntity<?> delete(@PathVariable("id") Integer id,
+                                @RequestBody @Valid OrderItemDto orderItemDto){
     boolean result = orderItemService.delete(id,orderItemDto);
     return ResponseEntity.ok(result);
 }
