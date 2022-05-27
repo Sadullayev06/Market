@@ -11,4 +11,5 @@ import javax.persistence.Table;
 @Entity
 @Table(name = ("images"))
 public class Image {
+    //hi
 }
