@@ -5,10 +5,43 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 @Getter
 @Setter
 @Entity
 @Table(name = ("users"))
 public class User {
+
+    private Integer id;
+
+    private String name;
+
+    private String surname;
+    @Email
+    private String email;
+
+    private String password;
+
+    private String contact;
+
+    private Integer imageId;
+
+    private String status;
+
+    private String UserRole;
+
+    private Integer adressId;
+
+
+
+
+
+
+
+
+
+
+
+
 }

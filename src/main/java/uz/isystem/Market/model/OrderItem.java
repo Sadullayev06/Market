@@ -11,4 +11,19 @@ import javax.persistence.Table;
 @Entity
 @Table(name = ("orderitems"))
 public class OrderItem {
+
+
+    private Integer id;
+
+    private String Order;
+
+    private String Product;
+
+    private String status;
+
+
+
+
+
+
 }

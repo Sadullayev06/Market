@@ -11,5 +11,28 @@ import javax.persistence.Table;
 @Entity
 @Table(name = ("images"))
 public class Image {
-    //hi
+
+    //hov
+
+    private Integer id;
+
+    private String path;
+
+    private String type;
+
+    private Long size;
+
+    private String token;
+
+
+
+
+
+
+
+
+
+
+
+
 }

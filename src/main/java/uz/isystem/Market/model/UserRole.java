@@ -11,4 +11,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = ("userroles"))
 public class UserRole {
+
+    private Integer id;
+
+    private String name;
+
+    private String status;
+
+
+
+
+
+
 }

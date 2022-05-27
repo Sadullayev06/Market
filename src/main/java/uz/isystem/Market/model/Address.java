@@ -12,4 +12,26 @@ import javax.persistence.Table;
 @Table(name = ("addresses"))
 public class Address {
 
+
+    private Integer id;
+
+    private String region;
+
+    private String City;
+
+    private String District;
+
+    private String Street;
+
+    private Integer Home;
+
+
+
+
+
+
+
+
+
+
 }

@@ -11,4 +11,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name = ("producttypes"))
 public class ProductType {
+
+    private Integer id;
+
+    private String name;
+
+    private String status;
+
+
+
+
 }
