@@ -8,7 +8,6 @@ import javax.persistence.Table;
 
 @Getter
 @Setter
-
 @Entity
 @Table(name = ("orderitems"))
 public class OrderItem {
