@@ -1,4 +1,7 @@
 package uz.isystem.Market.repository;
 
-public class ProductTypeRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import uz.isystem.Market.model.ProductType;
+
+public interface ProductTypeRepository extends JpaRepository<ProductType,Integer> {
 }
