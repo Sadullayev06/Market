@@ -9,8 +9,8 @@ import static org.springframework.web.client.HttpClientErrorException.*;
 @ControllerAdvice
 public class ExceptionHandler {
     @org.springframework.web.bind.annotation.ExceptionHandler
-    public ResponseEntity<?> exception(BadRequest badRequest){
-        return ResponseEntity.badRequest().body(badRequest.getMessage());
+    public ResponseEntity<?> exception(BadRequest a){
+        return ResponseEntity.badRequest().body(a.getMessage());
     }
 
 }

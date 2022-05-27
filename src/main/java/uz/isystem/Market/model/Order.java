@@ -24,13 +24,16 @@ public class Order {
 
     private String contact;
 
-    private String adress;
+    private String address;
 
     private LocalDateTime deleveredDate;
 
     private String status;
 
     private Double total_payment;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
+    private LocalDateTime deleteAt;
 
 
 
