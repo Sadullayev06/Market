@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name = ("adresses"))
-public class Adress {
+@Table(name = ("addresses"))
+public class Address {
 
 }

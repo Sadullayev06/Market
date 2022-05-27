@@ -1,4 +1,4 @@
 package uz.isystem.Market.controller;
 
-public class OrederController {
+public class OrderController {
 }
