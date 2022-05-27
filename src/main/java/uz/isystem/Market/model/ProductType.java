@@ -5,11 +5,12 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-@Table(name = ("producttypes"))
+@Table(name = ("productTypes"))
 public class ProductType {
 
     private Integer id;
@@ -17,6 +18,9 @@ public class ProductType {
     private String name;
 
     private String status;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
+    private LocalDateTime deleteAt;
 
 
 

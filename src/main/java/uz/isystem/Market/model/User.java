@@ -6,6 +6,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -31,7 +32,10 @@ public class User {
 
     private String UserRole;
 
-    private Integer adressId;
+    private Integer addressId;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
+    private LocalDateTime deleteAt;
 
 
 
