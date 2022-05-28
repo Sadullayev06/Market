@@ -1,5 +1,6 @@
 package uz.isystem.Market.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderDto {
 
 
@@ -29,6 +31,16 @@ public class OrderDto {
     private String status;
 
     private Double total_payment;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updateAt;
+
+    private LocalDateTime deleteAt;
+
+
+
+
 
 
 }

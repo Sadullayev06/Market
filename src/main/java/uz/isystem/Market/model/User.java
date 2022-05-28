@@ -33,8 +33,11 @@ public class User {
     private String UserRole;
 
     private Integer addressId;
+
     private LocalDateTime createdAt;
+
     private LocalDateTime updateAt;
+
     private LocalDateTime deleteAt;
 
 

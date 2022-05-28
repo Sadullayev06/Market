@@ -17,9 +17,30 @@ public class ProductType {
 
     private String name;
 
-    private String status;
+    private Integer merchant_id;
+
+    private Integer core;
+
+    private String material;
+
+    private String display;
+
+    private Integer ram;
+
+    private Integer camera_fron;
+
+    private Integer camera_back;
+
+    private Integer os;
+
+    private Integer storage;
+
+    private Integer bran_id;
+
     private LocalDateTime createdAt;
+
     private LocalDateTime updateAt;
+
     private LocalDateTime deleteAt;
 
 

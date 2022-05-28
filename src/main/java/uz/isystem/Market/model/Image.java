@@ -24,8 +24,11 @@ public class Image {
     private Long size;
 
     private String token;
+
     private LocalDateTime createdAt;
+
     private LocalDateTime updateAt;
+
     private LocalDateTime deleteAt;
 
 
