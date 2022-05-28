@@ -26,9 +26,9 @@ public class Order {
 
     private String address;
 
-    private LocalDateTime deleveredDate;
+    private LocalDateTime delevereDate;
 
-    private String status;
+    private Boolean status;
 
     private Double total_payment;
 

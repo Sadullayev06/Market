@@ -24,7 +24,7 @@ public class Image {
     private Long size;
 
     private String token;
-
+    private Boolean status;
     private LocalDateTime createdAt;
 
     private LocalDateTime updateAt;

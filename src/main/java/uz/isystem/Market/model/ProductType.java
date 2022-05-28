@@ -36,6 +36,7 @@ public class ProductType {
     private Integer storage;
 
     private Integer bran_id;
+    private Boolean status;
 
     private LocalDateTime createdAt;
 

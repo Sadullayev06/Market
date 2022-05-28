@@ -20,7 +20,7 @@ public class OrderItem {
 
     private String Product;
 
-    private String status;
+    private Boolean status;
 
     private LocalDateTime createdAt;
 

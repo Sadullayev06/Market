@@ -28,7 +28,7 @@ public class Product {
 
     private String ProductType;
 
-    private String status;
+    private Boolean status;
 
     private LocalDateTime createdAt;
 

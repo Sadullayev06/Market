@@ -17,7 +17,7 @@ public class UserRole {
 
     private String name;
 
-    private String status;
+    private Boolean status;
 
     private LocalDateTime createdAt;
 

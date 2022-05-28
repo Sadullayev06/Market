@@ -28,7 +28,7 @@ public class User {
 
     private Integer imageId;
 
-    private String status;
+    private Boolean status;
 
     private String UserRole;
 
