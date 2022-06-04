@@ -3,8 +3,7 @@ package uz.isystem.Market.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.time.LocalDateTime;
 
@@ -34,21 +33,20 @@ public class User {
 
     private Integer addressId;
 
+    @Column(name = ("created_at"))
     private LocalDateTime createdAt;
 
+    @Column(name = ("update_at"))
     private LocalDateTime updateAt;
 
+    @Column(name = ("delete_at"))
     private LocalDateTime deleteAt;
 
+    @OneToMany
+    @JoinColumn(name = ("user"),insertable = false,updatable = false)
+    private User user;
 
-
-
-
-
-
-
-
-
-
+    @Column(name = ("user"))
+    private Integer userId;
 
 }
