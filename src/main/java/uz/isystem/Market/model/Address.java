@@ -3,8 +3,7 @@ package uz.isystem.Market.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
@@ -14,7 +13,8 @@ import java.time.LocalDateTime;
 @Table(name = ("addresses"))
 public class Address {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String region;
@@ -34,13 +34,6 @@ public class Address {
     private LocalDateTime updateAt;
 
     private LocalDateTime deleteAt;
-
-
-
-
-
-
-
 
 
 }

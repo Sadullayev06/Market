@@ -3,8 +3,7 @@ package uz.isystem.Market.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
@@ -13,7 +12,8 @@ import java.time.LocalDateTime;
 @Table(name = ("orderitems"))
 public class OrderItem {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String Order;
@@ -27,10 +27,6 @@ public class OrderItem {
     private LocalDateTime updateAt;
 
     private LocalDateTime deleteAt;
-
-
-
-
 
 
 }

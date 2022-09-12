@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
 @Table(name = ("users"))
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
@@ -43,7 +45,7 @@ public class User {
     private LocalDateTime deleteAt;
 
     @OneToMany
-    @JoinColumn(name = ("user"),insertable = false,updatable = false)
+    @JoinColumn(name = ("user"), insertable = false, updatable = false)
     private User user;
 
     @Column(name = ("user"))
