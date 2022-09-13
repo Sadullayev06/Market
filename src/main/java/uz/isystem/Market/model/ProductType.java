@@ -38,11 +38,11 @@ public class ProductType {
 
     private Integer bran_id;
     private Boolean status;
-
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
-
+    @Column(name = "updated_at")
     private LocalDateTime updateAt;
-
+    @Column(name = "deleted_at")
     private LocalDateTime deleteAt;
 
 

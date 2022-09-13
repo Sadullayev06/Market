@@ -20,7 +20,10 @@ public class Image {
     private Long size;
     private String token;
     private Boolean status;
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
+    @Column(name = "updated_at")
     private LocalDateTime updateAt;
+    @Column(name = "deleted_at")
     private LocalDateTime deleteAt;
 }

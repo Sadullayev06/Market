@@ -31,11 +31,11 @@ public class Order {
     private Boolean status;
 
     private Double total_payment;
-
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
-
+    @Column(name = "updated_at")
     private LocalDateTime updateAt;
-
+    @Column(name = "deleted_at")
     private LocalDateTime deleteAt;
 
 

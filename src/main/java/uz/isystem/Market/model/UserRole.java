@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = ("userRoles"))
+@Table(name = ("userroles"))
 public class UserRole {
 
     @Id
@@ -19,16 +19,12 @@ public class UserRole {
     private String name;
 
     private Boolean status;
-
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
-
+    @Column(name = "updated_at")
     private LocalDateTime updateAt;
-
+    @Column(name = "deleted_at")
     private LocalDateTime deleteAt;
-
-
-
-
 
 
 }

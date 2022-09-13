@@ -20,11 +20,11 @@ public class Brand {
     private String name;
 
     private String status;
-
+    @Column(name = "created_at")
     private LocalDateTime create_At;
-
+    @Column(name = "updated_at")
     private LocalDateTime updated_At;
-
+    @Column(name = "deleted_at")
     private LocalDateTime deleted_At;
 
 
